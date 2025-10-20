@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brawlhalla – Weapons</title>
+    <meta name="description" content="Guida completa delle armi di Brawlhalla: tipologie, meccaniche, consigli pratici, signature e risorse ufficiali per approfondire.">
+    <title>Brawlhalla – Armi</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -27,14 +27,16 @@
                 <h3 id="quick-index-heading">Indice rapido</h3>
                 <ul>
                     <li><a href="#overview">Panoramica</a></li>
-                    <li><a href="#gameplay">Gameplay</a></li>
-                    <li><a href="#legends">Legends</a></li>
-                    <li><a href="#weapons">Armi</a></li>
+                    <li><a href="#mechanics">Meccaniche principali</a></li>
+                    <li><a href="#classes">Tipologie di armi</a></li>
+                    <li><a href="#practical">Uso pratico e consigli</a></li>
+                    <li><a href="#training">Allenamento e risorse</a></li>
+                    <li><a href="#references">Riferimenti ufficiali</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <main class="wiki-content">
+        <main class="wiki-content" role="main">
             <article>
                 <header>
                     <h2>Armi</h2>
@@ -43,92 +45,140 @@
                 <nav class="toc" aria-label="Sommario">
                     <strong>Sommario</strong>
                     <ul>
-                        <li><a href="#gameplay">Gameplay</a></li>
-                        <li><a href="#legends">Legends</a></li>
-                        <li><a href="#weapons">Armi</a></li>
+                        <li><a href="#overview">Panoramica</a></li>
+                        <li><a href="#mechanics">Meccaniche principali</a></li>
+                        <li><a href="#classes">Tipologie di armi (descrizioni)</a></li>
+                        <li><a href="#practical">Uso pratico e consigli per ogni arma</a></li>
+                        <li><a href="#advanced">Tecniche avanzate e signature</a></li>
+                        <li><a href="#training">Allenamento e risorse ufficiali</a></li>
                         <li><a href="#references">Riferimenti</a></li>
                     </ul>
                 </nav>
 
-                <section id="gameplay">
-                    <h3>Gameplay</h3>
-                    <p>Il gameplay di Brawlhalla ruota attorno al controllo del palco (stage control), alla gestione del posizionamento e all'ottenimento di KO. A differenza di alcuni platform fighter che usano percentuali come principale metrica, Brawlhalla utilizza un sistema che aumenta la vulnerabilità ai knockback man mano che si subiscono danni; il risultato è che giocatori con danno alto vengono allontanati più facilmente e possono essere eliminati fuori dal palco.</p>
-
-                    <h4>Meccaniche chiave</h4>
+                <section id="overview">
+                    <h3>Panoramica</h3>
+                    <p>Le armi in Brawlhalla determinano il moveset principale di una Legend. Ogni arma offre attacchi neutri, laterali, verticali, mosse aeree e signature. Conoscere il ruolo di un'arma aiuta a costruire strategie di neutral, combo, rientro e edgeguarding.</p>
+                    <p>Obiettivi della guida:</p>
                     <ul>
-                        <li><strong>Attacchi leggeri e pesanti:</strong> ogni arma ha attacchi neutri, laterali, verticali e signature (mossa speciale). Le signature sono potenti ma spesso prevedono prerequisiti di posizionamento.</li>
-                        <li><strong>Dodge e recovery:</strong> il dodge (invulnerabilità temporanea) e le mosse di recovery sono essenziali per rientrare sul palco e per contrastare gli avversari.</li>
-                        <li><strong>Edgeguarding:</strong> togliere le opportunità di rientro all'avversario è una strategia centrale per ottenere KO.</li>
-                        <li><strong>Throw e grab:</strong> prese e lanci consentono mixup e setup, spesso in combinazione con armi particolari.</li>
-                        <li><strong>Stage control e spacing:</strong> mantenere la posizione centrale e negare il controllo delle piattaforme avversarie è cruciale in molte modalità competitive.</li>
+                        <li>Spiegare le meccaniche comuni legate alle armi.</li>
+                        <li>Descrivere le tipologie di arma e i loro punti di forza/debolezza.</li>
+                        <li>Forire consigli pratici e risorse ufficiali per l'allenamento e l'aggiornamento.</li>
                     </ul>
-
-                    <h4>Modalità di gioco comuni</h4>
-                    <ul>
-                        <li>Free‑For‑All / Stock (1v1, 2v2, FFA)</li>
-                        <li>Timed matches (partite a tempo)</li>
-                        <li>Custom lobbies / tornei</li>
-                        <li>Eventi stagionali e modalità speciali</li>
-                    </ul>
-
-                    <p>Per migliorare: concentrare l'allenamento su gioco neutro (neutral), rientro (recovery), e conoscenza dei frame delle mosse più usate. Consultare le note di patch per capire i cambi di bilanciamento che possono impattare priorità e tierlist.</p>
                 </section>
 
-                <section id="legends">
-                    <h3>Legends</h3>
-                    <p>Le "Legends" sono i personaggi giocabili. Ogni Legend ha due armi assegnate che ne definiscono gran parte del moveset e delle strategie. Le Legend sono spesso caratterizzate da statistiche base che influenzano velocità di movimento, forza dei colpi, e resistenza.</p>
+                <section id="mechanics">
+                    <h3>Meccaniche principali correlate alle armi</h3>
+                    <h4>Knockback e danno</h4>
+                    <p>Il knockback è la risultante del danno accumulato e della potenza dell'attacco: armi con hit ad alto knockback sono orientate al KO, altre privilegiano il controllo e la pressione.</p>
 
-                    <h4>Cosa definisce una Legend</h4>
-                    <ul>
-                        <li><strong>Armi innate:</strong> combinazioni diverse (es. Spada + Lance, Gauntlet + Scythe, Bow + Rocket Lance) che creano stili di gioco distinti.</li>
-                        <li><strong>Statistiche base:</strong> valori numerici che influenzano attriti, velocità, danno e resistenza (nell'uso comune si citano stat come Attack/Strength, Defense, Dexterity, Speed).</li>
-                        <li><strong>Design e firma:</strong> ogni Legend ha signature moves (Sigs) che possono essere potenti ma prevedono rischi; imparare a usarle con saggezza è fondamentale.</li>
-                    </ul>
+                    <h4>Hitbox, frame data e priority</h4>
+                    <p>Comprendere la hitbox e i frame di startup/active/recovery è essenziale per punire e per evitare le signature avversarie. La "priority" definisce quali hitbox prevalgono in collisione.</p>
 
-                    <h4>Progressione e skin</h4>
-                    <p>Le Legend possono essere sbloccate tramite valuta di gioco o acquistate; esistono skin cosmetiche, colori e bundle. Il bilanciamento è mantenuto tramite patch regolari che modificano signature, hitbox e proprietà delle armi.</p>
+                    <h4>Signature</h4>
+                    <p>Le signature sono mosse uniche per ogni arma/legend, spesso più potenti ma con rischi (long recovery, telegraphing). Usare signature responsabilmente è fondamentale in competizioni.</p>
 
-                    <p>Per confronti dettagliati tra Legends (matchup, statistiche e movelist) consultare schede individuali e guide aggiornate: le fonti ufficiali e la community mantengono wiki e tabelle di matchup molto utili per il gioco competitivo.</p>
+                    <h4>Movement e cancella</h4>
+                    <p>Interrompere animazioni (cancel), combinare dash, jump e dodge, e utilizzare la gravitazione degli stage sono abilità che modificano l'efficacia dell'arma in situazioni reali.</p>
                 </section>
 
-                <section id="weapons">
-                    <h3>Armi</h3>
-                    <p>Le armi sono il cuore del gameplay: ogni arma offre un set di mosse che include attacchi leggeri, pesanti, tilt e signature. La scelta dell'arma influenza spacing, combo, rientro e capacità di controllo del palco.</p>
+                <section id="classes">
+                    <h3>Tipologie di armi (descrizioni e ruoli)</h3>
+                    <p>Di seguito sono elencate le categorie d'arma presenti nel gioco con descrizioni sintetiche e ruoli tipici in partita.</p>
 
-                    <h4>Tipologie e ruoli</h4>
+                    <article class="weapon-class">
+                        <h4>Sword</h4>
+                        <p>Stile bilanciato, buono in neutral e in combo ravvicinati. Offre mosse veloci e sicure, con opzioni di spacing e punizioni moderate.</p>
+                    </article>
+
+                    <article class="weapon-class">
+                        <h4>Blasters</h4>
+                        <p>Progettate per controllo a distanza e pressione con proiettili; eccellenti per keep-away e mixup. Richiedono buona gestione del positioning per essere efficaci.</p>
+                    </article>
+
+                    <article class="weapon-class">
+                        <h4>Bow</h4>
+                        <p>Eccelle nel controllo dello stage e nel poking: colpi a distanza e follow-up aeree. Sono indicate per giocatori che prediligono spacing e precisione.</p>
+                    </article>
+
+                    <article class="weapon-class">
+                        <h4>Hammer</h4>
+                        <p>Attacchi potenti e larghi con ottima capacità di KO. Generalmente più lenti: richiedono buona lettura e posizionamento per sfruttare la potenza.</p>
+                    </article>
+
+                    <article class="weapon-class"></article>
+                        <h4>Gauntlets / Katars</h4>
+                        <p>Armi da close-range, orientate al combo e al pressure continuato. Veloci e combo-friendly, ma meno efficaci a lunga distanza.</p>
+                    </article>
+
+                    <article class="weapon-class"></article>
+                        <h4>Spears / Lances</h4>
+                        <p>Ottime per controllo del reach e per mantenere l'avversario a distanza. Buone opzioni anti-air e per disincentivare approcci facili.</p>
+                    </article>
+
+                    <article class="weapon-class">
+                        <h4>Scythe / Rocket Lance / Axe / Orb</h4>
+                        <p>Categorie con stili più unici: la Scythe ha opzioni di caos e mixup, Rocket Lance è forte in KO e rientro, Axe è potente a terra e Orb è versatile con buone opzioni aeree. Ogni arma ha punti di forza distinti che richiedono adattamento.</p>
+                    </article>
+
+                    <p>Nota: l'elenco è orientativo; per dettagli specifici su hitbox e frame consultare le risorse ufficiali e i changelog per cogliere variazioni dovute a patch.</p>
+                </section>
+
+                <section id="practical">
+                    <h3>Uso pratico e consigli per ogni arma</h3>
+                    <p>Linee guida generali per migliorare l'utilizzo delle armi:</p>
                     <ul>
-                        <li><strong>Sword / Katars / Gauntlets:</strong> spesso orientate al gioco rapido e ai combo ravvicinati.</li>
-                        <li><strong>Hammer / Rocket Lance / Scythe:</strong> attacchi potenti, più orientati al KO e allo spacing forte.</li>
-                        <li><strong>Bow / Blasters / Spear:</strong> buone per controllo del palco a distanza e per colpi di precisione.</li>
+                        <li>Studia le hitbox delle mosse principali tramite replay e strumenti ufficiali/community.</li>
+                        <li>Allena neutral game: riconoscere quando forzare approccio o preservare il spacing.</li>
+                        <li>Impara i follow-up più affidabili per ogni arma e come convertire danno in KO.</li>
+                        <li>Gestisci le signature: valuta rischi e ricompense e usa le signature in situazioni dove il recovery è assicurato o dove guadagni vantaggio di posizione.</li>
+                        <li>Adatta il playstyle in base alla Legend con cui giochi: due Legends con la stessa arma possono usare strategie molto diverse.</li>
                     </ul>
 
-                    <h4>Uso pratico</h4>
-                    <p>Per sfruttare un'arma efficacemente è necessario padroneggiare:</p>
+                    <h4>Esempi pratici</h4>
+                    <p>Per armi da lunga distanza (Bow, Blasters): privilegiare spacing, uso di piattaforme e controllo verticale. Per armi melee (Gauntlets, Katars): entrare nel vantaggio di frame, mantenere pressione e cercare conversioni da hit confermati. Per armi heavy (Hammer, Axe): cercare angoli di KO e sfruttare la priorità delle hit potenti.</p>
+                </section>
+
+                <section id="advanced">
+                    <h3>Tecniche avanzate e signature</h3>
+                    <p>Le tecniche avanzate includono:</p>
                     <ul>
-                        <li>Neutral game: come creare opportunità e punire gli errori avversari.</li>
-                        <li>Combos e follow‑ups: concatenazioni di colpi che portano a danno consistente o a KO.</li>
-                        <li>Edgeguarding specifico per arma: alcune armi hanno ottime opzioni per chiudere il rientro avversario.</li>
-                        <li>Contromisure: imparare i limiti delle signature avversarie e come evitare i loro setup.</li>
+                        <li>Frame-cancels specifici per ogni arma per ridurre i tempi di recovery e aumentare la fluidità delle combo.</li>
+                        <li>Weapon-specific edgeguard setups: praticare angoli e tempistiche per negare rientri.</li>
+                        <li>Mixup con dodge e fake approaches per forzare letture e aprire la difesa avversaria.</li>
+                    </ul>
+                    <p>Le signature vanno trattate come risorse: usarle per aumentare la pressione o per chiudere gli scambi quando la posizione è favorevole.</p>
+                </section>
+
+                <section id="training">
+                    <h3>Allenamento e risorse ufficiali</h3>
+                    <p>Per apprendere e verificare le informazioni sulle armi è consigliabile usare queste risorse:</p>
+                    <ul>
+                        <li><a href="https://www.brawlhalla.com" target="_blank" rel="noopener">Sito ufficiale di Brawlhalla</a> — annunci, guide ufficiali e news.</li>
+                        <li><a href="https://www.brawlhalla.com/news/" target="_blank" rel="noopener">Patch notes ufficiali</a> — consultare i changelog per aggiornamenti su armi e signature.</li>
+                        <li><a href="https://brawlhalla.fandom.com/wiki/Weapons" target="_blank" rel="noopener">Brawlhalla Wiki (Fandom) - Weapons</a> — panorama dettagliato, movelist e note community-driven.</li>
+                        <li>Modalità allenamento interna: usare la modalità pratica per testare hitbox, tempistiche e setup di edgeguarding.</li>
+                        <li>Analisi video: studiare VOD di giocatori esperti per imparare l'applicazione pratica delle meccaniche.</li>
                     </ul>
 
-                    <p>Molte guide di arma presentano frame data, hitbox e tutorial video per apprendere i tempi e i cancel; queste risorse sono fondamentali per passare da buon giocatore a livello competitivo.</p>
+                    <h4>Routine di allenamento consigliata</h4>
+                    <ol>
+                        <li>10–15 minuti di warm-up movement (dash, jump, recovery).</li>
+                        <li>20–30 minuti in training mode per testare combo e timing specifici dell'arma scelta.</li>
+                        <li>Sessioni di replay review per identificare errori di positioning e opzioni mancanti.</li>
+                        <li>Partite competitive con focus su uno o due obiettivi tecnici (es. migliorare neutral o edgeguard success rate).</li>
+                    </ol>
                 </section>
 
                 <section id="references">
                     <h3>Riferimenti</h3>
-                    <p>Fonti ufficiali e risorse affidabili per approfondire:</p>
+                    <p>Fonti ufficiali e risorse consigliate:</p>
                     <ul>
-                        <li><a href="https://www.brawlhalla.com" target="_blank" rel="noopener">Sito ufficiale di Brawlhalla</a> — notizie, eventi e annunci ufficiali.</li>
-                        <li><a href="https://www.brawlhalla.com/news/" target="_blank" rel="noopener">News ufficiali / Patch notes</a> — changelog e dettagli di bilanciamento.</li>
-                        <li><a href="https://en.wikipedia.org/wiki/Brawlhalla" target="_blank" rel="noopener">Pagina Wikipedia di Brawlhalla</a> — storia del gioco e informazioni generali.</li>
-                        <li><a href="https://brawlhalla.fandom.com/wiki/Brawlhalla_Wiki" target="_blank" rel="noopener">Brawlhalla Wiki (Fandom)</a> — guide dettagliate su meccaniche, armi e Legends (risorsa community‑driven, utile per tabelle e movelist).</li>
-                        <li><a href="https://brawlhalla.fandom.com/wiki/Mechanics" target="_blank" rel="noopener">Meccaniche di gioco (Fandom)</a> — spiegazioni approfondite su frame, hitbox e recovery.</li>
-                        <li><a href="https://brawlhalla.fandom.com/wiki/Weapons" target="_blank" rel="noopener">Panoramica armi (Fandom)</a> — descrizioni e statistiche delle armi.</li>
-                        <li><a href="https://store.steampowered.com/app/291550/Brawlhalla/" target="_blank" rel="noopener">Pagina Steam di Brawlhalla</a> — informazioni sulla versione PC e community hub.</li>
-                        <li><a href="https://www.ubisoft.com/en-us/game/brawlhalla" target="_blank" rel="noopener">Pagina Ubisoft / Blue Mammoth</a> — informazioni sullo sviluppatore/publisher.</li>
+                        <li><a href="https://www.brawlhalla.com" target="_blank" rel="noopener">Sito ufficiale di Brawlhalla</a></li>
+                        <li><a href="https://www.brawlhalla.com/news/" target="_blank" rel="noopener">Patch notes ufficiali</a></li>
+                        <li><a href="https://brawlhalla.fandom.com/wiki/Brawlhalla_Wiki" target="_blank" rel="noopener">Brawlhalla Wiki (Fandom)</a> — per movelist e dettagli community-maintained</li>
+                        <li><a href="https://store.steampowered.com/app/291550/Brawlhalla/" target="_blank" rel="noopener">Pagina Steam</a></li>
                     </ul>
-
-                    <p>Per approfondimenti competitivi e tutorial video consultare canali e guide della community (tornei, vods e playlist didattiche): queste risorse aiutano a vedere le meccaniche applicate in partita reale.</p>
+                    <p>Per informazioni ufficiali aggiornate consultare regolarmente le patch notes e le comunicazioni del team di sviluppo: le proprietà delle armi possono cambiare con gli update di bilanciamento.</p>
                 </section>
             </article>
         </main>
