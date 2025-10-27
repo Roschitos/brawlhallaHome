@@ -1,1 +1,150 @@
+/* === Reset base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* === Layout generale === */
+body {
+    background-color: #0e0e0f;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(90deg, #2c2c2f, #1c1c1f);
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #d97745;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+header a {
+    color: #d97745;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* === Legend Card === */
+.legend-page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem;
+}
+
+.legend-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1a1a1d;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* === Image Viewer === */
+.image-viewer {
+    flex: 1;
+    text-align: center;
+}
+
+.legend-img {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    background: #2e2e33;
+    padding: 0.5rem;
+}
+
+.skin-selector {
+    margin-top: 1rem;
+}
+
+.skin-selector button {
+    background: #d97745;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.skin-selector button:hover {
+    background: #a0522d;
+}
+
+/* === Info Section === */
+.legend-info {
+    flex: 2;
+}
+
+.legend-info h2 {
+    color: #ffb366;
+    margin-bottom: 0.5rem;
+}
+
+.lore {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* === Weapons === */
+.weapons {
+    margin-bottom: 1.5rem;
+}
+
+.weapon-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.weapon {
+    text-align: center;
+}
+
+.weapon img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto 0.25rem;
+}
+
+/* === Stats === */
+.stats-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+}
+
+.stats-grid li {
+    background: #222227;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
 
