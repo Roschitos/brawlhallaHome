@@ -1,150 +1,202 @@
-/* === Reset base === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-1: #b99a82;
+  --bg-2: #8f5f40;
+  --accent-start: #d97745;
+  --accent-end: #a0522d;
+  --accent: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  --contrast: #2b2018;
+  --muted: #7a5a46;
+  --muted-2: rgba(170, 90, 45, 0.08);
+  --content: #fff8f3;
+  --glass: rgba(255, 255, 255, 0.90);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-1: 0 12px 30px rgba(34, 28, 24, 0.06);
+  --shadow-2: 0 18px 46px rgba(34, 28, 24, 0.08);
+  --max-width: 1200px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* === Layout generale === */
 body {
-    background-color: #0e0e0f;
-    color: #e0e0e0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(155, 78, 42, 0.07), transparent 6%),
+    radial-gradient(900px 400px at 90% 90%, rgba(47, 28, 20, 0.06), transparent 6%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--contrast);
+  line-height: 1.5;
 }
 
+/* header & nav ripreso da style.css */
 header {
-    background: linear-gradient(90deg, #2c2c2f, #1c1c1f);
-    padding: 1rem 2rem;
-    border-bottom: 2px solid #d97745;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: linear-gradient(180deg, rgba(150, 100, 72, 0.06), transparent);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 header h1 {
-    font-size: 1.4rem;
-    font-weight: 500;
+  margin: 0;
+  font-size: 1.05rem;
+  color: #3a2b24;
 }
 
-header a {
-    color: #d97745;
-    text-decoration: none;
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
-header a:hover {
-    text-decoration: underline;
+.top-nav a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 220ms var(--ease);
 }
 
-/* === Legend Card === */
-.legend-page {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    padding: 2rem;
+.top-nav a.active,
+.top-nav a:hover {
+  background: linear-gradient(90deg, rgba(155, 78, 42, 0.12), rgba(160, 110, 86, 0.06));
+  transform: translateY(-2px);
 }
 
+/* Layout generale */
+.layout.bg-center {
+  display: flex;
+  justify-content: center;
+  padding: 40px 18px;
+}
+
+.center-panel {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 22px;
+  background: linear-gradient(180deg, rgba(255, 250, 246, 0.90), rgba(255, 245, 238, 0.92));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  padding: 20px;
+}
+
+/* Wiki content */
+.wiki-content {
+  background: var(--content);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid rgba(42, 35, 31, 0.07);
+}
+
+/* ----- LEGEND CARD ----- */
 .legend-card {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #1a1a1d;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    max-width: 900px;
-    width: 100%;
-    padding: 2rem;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: var(--glass);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  padding: 16px;
+  border: 1px solid rgba(34, 28, 24, 0.05);
+  text-align: center;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.legend-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 56px rgba(34, 28, 24, 0.12);
 }
 
-/* === Image Viewer === */
-.image-viewer {
-    flex: 1;
-    text-align: center;
-}
-
-.legend-img {
-    width: 250px;
-    height: auto;
-    border-radius: 12px;
-    background: #2e2e33;
-    padding: 0.5rem;
+.legend-image img {
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
 }
 
 .skin-selector {
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.skin-selector label {
+  font-weight: 600;
+  color: var(--muted);
+}
+.skin-selector select {
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(34,28,24,0.15);
+  background: var(--content);
+  font-size: 0.95rem;
 }
 
-.skin-selector button {
-    background: #d97745;
-    border: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
+/* ----- WEAPONS ----- */
+.weapon-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 8px;
 }
-
-.skin-selector button:hover {
-    background: #a0522d;
-}
-
-/* === Info Section === */
-.legend-info {
-    flex: 2;
-}
-
-.legend-info h2 {
-    color: #ffb366;
-    margin-bottom: 0.5rem;
-}
-
-.lore {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-/* === Weapons === */
-.weapons {
-    margin-bottom: 1.5rem;
-}
-
-.weapon-list {
-    display: flex;
-    gap: 1rem;
-}
-
 .weapon {
-    text-align: center;
+  text-align: center;
 }
-
 .weapon img {
-    width: 48px;
-    height: 48px;
-    display: block;
-    margin: 0 auto 0.25rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: var(--glass);
+  padding: 6px;
+  box-shadow: var(--shadow-1);
+}
+.weapon p {
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* === Stats === */
+/* ----- STATS ----- */
 .stats-grid {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid rgba(34,28,24,0.05);
+}
+.stats-grid div {
+  font-weight: 600;
+}
+.stats-grid span {
+  float: right;
+  color: var(--accent-start);
+  font-weight: 700;
 }
 
-.stats-grid li {
-    background: #222227;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-}
-
+/* Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #111;
-    font-size: 0.9rem;
-    color: #aaa;
-    border-top: 1px solid #333;
+  text-align: center;
+  padding: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
-
