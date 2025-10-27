@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawlhalla – Bödvar</title>
+    <link rel="stylesheet" href="../../css/legendsStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../legends.html">← Legends</a> / Bödvar</h1>
+    </header>
+
+    <main class="legend-page">
+        <section class="legend-card">
+            <div class="image-viewer">
+                <img id="legend-image" src="../../img/legends/bodvar_default.png" alt="Bödvar" class="legend-img">
+                <div class="skin-selector">
+                    <button onclick="changeSkin('default')">Default</button>
+                    <button onclick="changeSkin('viking')">Viking</button>
+                    <button onclick="changeSkin('ironbear')">Ironbear</button>
+                </div>
+            </div>
+
+            <div class="legend-info">
+                <h2>Bödvar</h2>
+                <p class="lore">
+                    Feroce guerriero dei ghiacci e difensore dei deboli, Bödvar è una delle prime leggende di Brawlhalla.
+                </p>
+
+                <div class="weapons">
+                    <h3>Armi</h3>
+                    <div class="weapon-list">
+                        <div class="weapon">
+                            <img src="../../img/weapons/hammer.png" alt="Martello">
+                            <span>Martello</span>
+                        </div>
+                        <div class="weapon">
+                            <img src="../../img/weapons/sword.png" alt="Spada">
+                            <span>Spada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <h3>Statistiche Base</h3>
+                    <ul class="stats-grid">
+                        <li><strong>Forza:</strong> 6</li>
+                        <li><strong>Destrezza:</strong> 5</li>
+                        <li><strong>Difesa:</strong> 6</li>
+                        <li><strong>Velocità:</strong> 5</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Rosca Anatolie Francesco – Wiki Brawlhalla Project</p>
+    </footer>
+
+    <script>
+        function changeSkin(skin) {
+            const image = document.getElementById("legend-image");
+            image.src = `../../img/legends/bodvar_${skin}.png`;
+        }
+    </script>
+</body>
+</html>
 
