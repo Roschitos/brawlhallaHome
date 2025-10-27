@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brawlhalla – Bödvar</title>
-    <link rel="stylesheet" href="../../css/legendsStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bödvar – Brawlhalla Legend</title>
+  <link rel="stylesheet" href="../../css/legendsStyle.css">
 </head>
-
 <body>
-    <header>
-        <h1><a href="../legends.html">← Legends</a> / Bödvar</h1>
-    </header>
 
-    <main class="legend-page">
-        <section class="legend-card">
-            <div class="image-viewer">
-                <img id="legend-image" src="../../img/legends/bodvar_default.png" alt="Bödvar" class="legend-img">
-                <div class="skin-selector">
-                    <button onclick="changeSkin('default')">Default</button>
-                    <button onclick="changeSkin('viking')">Viking</button>
-                    <button onclick="changeSkin('ironbear')">Ironbear</button>
-                </div>
+<header>
+  <h1>Brawlhalla</h1>
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a class="active" href="../legends.html">Legends</a></li>
+      <li><a href="../weapons.html">Weapons</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="layout bg-center">
+  <div class="center-panel">
+
+    <aside class="sidebar left">
+      <nav class="sidebar-nav">
+        <h3>Indice rapido</h3>
+        <ul>
+          <li><a href="#overview">Panoramica</a></li>
+          <li><a href="#skins">Skins</a></li>
+          <li><a href="#weapons">Armi</a></li>
+          <li><a href="#stats">Statistiche</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="wiki-content">
+      <article>
+        <header>
+          <h2 id="overview">Bödvar</h2>
+          <p class="byline">La leggenda vichinga che combatte con potenza e onore.</p>
+        </header>
+
+        <section id="skins">
+          <h3>Skins</h3>
+          <div class="legend-card">
+            <div class="legend-image">
+              <img id="legend-img" src="../../img/legends/bodvar_default.png" alt="Bödvar Skin" />
             </div>
-
-            <div class="legend-info">
-                <h2>Bödvar</h2>
-                <p class="lore">
-                    Feroce guerriero dei ghiacci e difensore dei deboli, Bödvar è una delle prime leggende di Brawlhalla.
-                </p>
-
-                <div class="weapons">
-                    <h3>Armi</h3>
-                    <div class="weapon-list">
-                        <div class="weapon">
-                            <img src="../../img/weapons/hammer.png" alt="Martello">
-                            <span>Martello</span>
-                        </div>
-                        <div class="weapon">
-                            <img src="../../img/weapons/sword.png" alt="Spada">
-                            <span>Spada</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stats">
-                    <h3>Statistiche Base</h3>
-                    <ul class="stats-grid">
-                        <li><strong>Forza:</strong> 6</li>
-                        <li><strong>Destrezza:</strong> 5</li>
-                        <li><strong>Difesa:</strong> 6</li>
-                        <li><strong>Velocità:</strong> 5</li>
-                    </ul>
-                </div>
+            <div class="skin-selector">
+              <label for="skinSelect">Scegli Skin:</label>
+              <select id="skinSelect" onchange="changeSkin(this)">
+                <option value="../../img/legends/bodvar_default.png">Default</option>
+                <option value="../../img/legends/bodvar_ironbear.png">Ironbear</option>
+                <option value="../../img/legends/bodvar_viking.png">Viking</option>
+              </select>
             </div>
+          </div>
         </section>
+
+        <section id="weapons">
+          <h3>Armi</h3>
+          <div class="weapon-icons">
+            <div class="weapon"><img src="../../img/weapons/sword.png" alt="Spada" /><p>Spada</p></div>
+            <div class="weapon"><img src="../../img/weapons/hammer.png" alt="Martello" /><p>Martello</p></div>
+          </div>
+        </section>
+
+        <section id="stats">
+          <h3>Statistiche</h3>
+          <div class="stats-grid">
+            <div><strong>Forza:</strong> <span>7</span></div>
+            <div><strong>Destrezza:</strong> <span>6</span></div>
+            <div><strong>Difesa:</strong> <span>6</span></div>
+            <div><strong>Velocità:</strong> <span>5</span></div>
+          </div>
+        </section>
+      </article>
     </main>
 
-    <footer>
-        <p>&copy; Rosca Anatolie Francesco – Wiki Brawlhalla Project</p>
-    </footer>
+  </div>
+</div>
 
-    <script>
-        function changeSkin(skin) {
-            const image = document.getElementById("legend-image");
-            image.src = `../../img/legends/bodvar_${skin}.png`;
-        }
-    </script>
+<footer>
+  <p>&copy; Rosca Anatolie Francesco. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+  function changeSkin(select) {
+    document.getElementById('legend-img').src = select.value;
+  }
+</script>
 </body>
 </html>
-
